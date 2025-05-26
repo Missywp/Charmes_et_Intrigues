@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">  
+    <title>Ollama</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="elementos-login">
+        <form id="mform">
+            <label>
+                <a>Informe o Nome do Livro: </a>
+                <input type="text" name="message">
+            </label>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="resposta">
+            Loading...
+        </div>
+    </div>
+    
+    
+</body>
+<script>
+    var meuForm = document.getElementById("mform");
+    meuForm.addEventListener("submit", e => { // e de evento: recebe um evento como parâmetro
+        e.preventDefault(); // evita que a página seja carregada
+        const formData = new FormData(meuForm);
+        const data = Object.fromEntries(formData.entries());
+        fetch("http://127.0.0.1:5000/ask", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(respjson => {
+                var composta = `
+                <div class="answer">
+                    <p>Nome do Livro: ${respjson.livro}</p>
+                    <p>Autor: ${respjson.autor}</p>
+                    <p>Prefácio: ${respjson.prefacio}</p>
+                </div>
+            `
+                document.getElementById("resposta").innerHTML = composta
+            });
+    });
+</script>
+
+</html>

@@ -1,0 +1,237 @@
+/* Estilos comuns */
+html,
+body {
+    height: 100%; /* Definindo a altura da página para ocupar toda a tela */
+    margin: 0; /* Removendo a margem padrão */
+    display: flex; /* Usando flexbox para o layout */
+    justify-content: center; /* Centralizando horizontalmente os itens */
+    align-items: center; /* Centralizando verticalmente os itens */
+    background-color: #f4f4f4; /* Definindo a cor de fundo da página */
+}
+
+/* Estilos para a caixa de login */
+.elementos-login {
+    background: white; /* Definindo fundo branco */
+    padding: 20px; /* Adicionando espaço interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombras para dar profundidade */
+    border: 2px solid #cb6ce6; /* Borda roxa */
+    text-align: center; /* Centralizando o texto dentro da caixa */
+    display: flex; /* Usando flexbox para o layout */
+    flex-direction: column; /* Organizamos os itens na vertical */
+    align-items: center; /* Alinhando os itens no centro horizontal */
+    justify-content: center; /* Alinhando os itens no centro vertical */
+}
+
+
+/* Estilos para os inputs e botões dentro da caixa de login */
+.elementos-login input,
+.elementos-login button {
+    margin: 6px 7px; /* Adicionando espaçamento entre os elementos */
+}
+
+/* Estilos para os ícones */
+.elementos-icones {
+    color: #cb6ce6; /* Cor roxa para os ícones */
+    display: flex; /* Usando flexbox */
+    flex-direction:row; /* Organizamos os ícones verticalmente */
+    align-items: center; /* Alinhando os ícones no centro *//
+}
+
+/* Estilos para os campos de input */
+.inputs {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Definindo a fonte */
+    margin-top: 3px; /* Espaçamento superior */
+    padding: 10px 40px 10px 10px; /* Espaçamento interno para os campos */
+    border-radius: 7px; /* Bordas arredondadas */
+    width: 155px; /* Definindo a largura dos inputs */
+    border: 2px solid #cb6ce6; /* Borda roxa */
+    text-align:left; /* Centralizando o texto dentro das caixas de input */
+}
+
+.container-textarea{
+    display: flex;
+    align-items: flex-start;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 3px;
+    padding: 10px;
+    border-radius: 7px;
+    gap: 10px;
+    width: 100%;
+    resize: vertical;
+    border: 2px solid #cb6ce6;
+    box-sizing: border-box;
+}
+
+.container-textarea textarea{
+    flex: 1;
+}
+
+/* Container para os ícones dentro dos inputs */
+.input-container {
+    position: relative; /* Definindo a posição relativa para os ícones */
+    display: flex; /* Usando flexbox */
+    align-items: center; /* Alinhando ícones e input*/
+    justify-content: center; /* Centralizando os itens no container */
+}
+
+/* Estilo para o ícone de olho (para mostrar/esconder senha) */
+.eye-icon {
+    position: absolute; /* Posição absoluta dentro do container */
+    right: 10px; /* Distância da borda direita */
+    cursor: pointer; /* Cursor em forma de mão ao passar sobre o ícone */
+    color: #cb6ce6; /* Cor roxa para o ícone */
+}
+
+/* Estilo para o botão */
+button {
+    margin-top: 10px; /* Espaçamento superior */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #ef0ba1; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    font-size: 14px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Cursor em forma de mão ao passar sobre o botão */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #cb6ce6; /* Mudando a cor do fundo quando o mouse passa sobre o botão */
+}
+
+/* Estilo para o link "cancelar" */
+.bnt-cancelar {
+    color: white; /* Cor do texto do link */
+    text-decoration: none; /* Removendo o sublinhado do link */
+}
+
+/* Estilo para o link de login */
+a[href="login.html"] {
+    color: #ffffff; /* Cor do link */
+    text-decoration: none; /* Removendo o sublinhado do link */
+    font-size: 14px; /* Tamanho da fonte do link */
+}
+
+/* Efeito ao passar o mouse sobre o link de login */
+a[href="login.html"]:hover {
+    text-decoration: underline; /* Adicionando sublinhado quando o mouse passa sobre o link */
+}
+
+/* Estilo para o link de cadastro de usuário */
+a.link_cadastro, a.link_cadastro:visited, a.link_cadastro:hover, a.link_cadastro:link {
+    color: #ef0ba1; /* Cor do link */
+    text-decoration: none; /* Removendo o sublinhado do link */
+    font-size: 1em; /* Tamanho da fonte do link */
+}
+/* Efeito ao passar o mouse sobre o link de cadastro */
+a.link_cadastro:hover{
+    color: #cb6ce6;
+    text-decoration: underline;
+}
+
+
+/* Estilos específicos para a tela de login */
+.container {
+    display: flex; /* Usando flexbox */
+    justify-content: center; /* Centralizando o conteúdo horizontalmente */
+    align-items: center; /* Centralizando o conteúdo verticalmente */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+}
+
+/* Estilos para os ícones dentro do container */
+.elementos-icones i {
+    font-size: 18px; /* Tamanho do ícone */
+    margin-bottom: 5px; /* Espaçamento inferior entre os ícones */
+}
+
+/* Estilos específicos para a tela de cadastro */
+.elementos-login a {
+    font-size: 16px; /* Tamanho da fonte para o link de cadastro */
+    font-weight: bold; /* Deixando o texto em negrito */
+}
+
+/* Estilo para o link dentro do botão */
+button a {
+    color: white; /* Cor do texto do link */
+    text-decoration: none; /* Removendo o sublinhado do link */
+    font-weight: bold; /* Deixando o texto em negrito */
+    font-size: 14px; /* Tamanho da fonte do link */
+}
+
+/* Efeito ao passar o mouse sobre o link dentro do botão */
+button a:hover {
+    text-decoration: underline; /* Adicionando sublinhado ao passar o mouse sobre o link */
+}
+
+/* Estilos para os ícones dentro do container de ícones */
+.elementos-icones i {
+    font-size: 18px; /* Tamanho do ícone */
+    margin-bottom: 5px; /* Espaçamento inferior entre os ícones */
+}
+
+.escrita-login{
+    color:#cb6ce6;
+}
+
+
+/* Topo fixo com logo, nome e menu */
+.topo-site {
+    position: fixed;
+    top: 0;
+    left: 0; /* adicionado para não quebrar o menu */
+    width: 100%;
+    height: 60px;
+    background-color:  #a8c19c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.logo-site {
+    height: 55px;
+}
+
+.titulo-site {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: Verdana, sans-serif;
+    text-align: left;
+    flex-grow: 1; /* Deixa o título ocupar o espaço disponível */
+}
+
+/* Menu - Centralizar os botões de navegação */
+.menu-site {
+    display: flex;
+    justify-content: center;
+    flex-grow: 2; /* Isso faz o menu centralizar */
+    gap: 30px;
+}
+
+.menu-site a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 15px 30px; 
+}
+
+.menu-site a:hover {
+    color: #ef0b9f8a;
+}
+
+/* Texto central da página */
+.apresentacao-site {
+    margin-top: 100px;
+    text-align: center;
+    color: #cb6ce6;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    padding: 20px;
+}

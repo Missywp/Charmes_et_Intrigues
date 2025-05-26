@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="imagens/logo_Browser.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <base href="http://localhost/Clube_Livro1/" />
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="elementos-login">
+            <img src="imagens/logo_fundo.png" alt="Logo">
+             <a>Charmes et Intrigues</a>
+             <a>Faça seu Login!</a>
+             <form id="formLogin" method="POST" action="php/login.php">
+                <div class="elementos-icones">
+                    <i class="fa-solid fa-user"></i>
+                    <input class="inputs" type="text" name="nome" placeholder="Nome do Usuário">
+                </div>
+    
+                <div class="elementos-icones">
+                    <i class="fa-solid fa-lock"></i>
+                    <div class="input-container">
+                        <input id="passinput" name="senha" class="inputs" type="password" placeholder="Senha">
+                        <i id="viewpass" class="fa-solid fa-eye eye-icon"></i>
+                    </div>
+                </div>
+    
+                <a href="home.html"></a>
+                    <button type="submit">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <span>Entrar</span>
+                    </button>
+             </form>
+            
+            </a>
+            <br>
+            <a>Ainda não possui Cadastro?</a>
+            <a class="link_cadastro" href="/components/cadastroUsuario.html">Cadastre-se!</a>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
